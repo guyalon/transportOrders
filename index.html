@@ -5,14 +5,26 @@
     <title>Nir invitation</title>
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
     <div class="content-wrapper">
         <div class="orders-form-wrapper">
+            <div class="radio-buttons">
+                <span>מעוניין בהסעה בכיוון:</span>
+                <br>
+                <div class="radio-input-wrapper">
+                    <div class="button-wrapper"><input type="radio" name="transport_directions" value="both_ways" checked>הלוך וחזור</div>
+                    <div class="button-wrapper"><input type="radio" name="transport_directions" value="only_from_airport"> רק הלוך</div>
+                    <div class="button-wrapper"><input type="radio" name="transport_directions" value="only_to_airport"> רק חזור</div>
+                </div>
+                <div class="clear"></div>
+            </div>
 
-
-
+            <div class="arrivals"></div>
+            <div class="departures"></div>
+            <div class="personal-details"></div>
         </div>
     </div>
 

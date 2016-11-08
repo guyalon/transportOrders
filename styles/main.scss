@@ -1,0 +1,28 @@
+
+
+html,body{
+  padding: 0;
+  margin:0;
+  direction: rtl;
+}
+.clear{clear: both;}
+
+.content-wrapper{
+  width: 100%;
+
+  .input-wrapper{
+    width: calc(100% - 10px);
+    height:30px;
+    padding: 5px;
+    input, select, textarea{float: left;width:200px;height:30px;border-radius: 5px;font-size:16px;}
+    button{
+      float: left;width:100px; height: 30px;background-color:orange;font-size: 16px;
+    }
+  }
+  .radio-input-wrapper{
+    .button-wrapper{
+      float: right;
+      padding: 5px;
+    }
+  }
+}
