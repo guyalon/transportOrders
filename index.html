@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <title>Nir invitation</title>
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDS4rOBCh1EsR3EzeVK9g8PRn3m-VA2Cw&libraries=places&callback=initAutocomplete"
+            async defer></script>
+
 </head>
 <body>
 
@@ -21,10 +26,11 @@
                 </div>
                 <div class="clear"></div>
             </div>
-
-            <div class="arrivals"></div>
-            <div class="departures"></div>
-            <div class="personal-details"></div>
+            <form name="transportation_form" id="transportation_form">
+                <div class="arrivals"></div>
+                <div class="departures"></div>
+                <div class="personal-details"></div>
+            </form>
         </div>
     </div>
 

@@ -8,24 +8,47 @@ html, body {
 
 .content-wrapper {
   width: 100%; }
-  .content-wrapper .input-wrapper {
-    width: calc(100% - 10px);
-    height: 30px;
-    padding: 5px; }
-    .content-wrapper .input-wrapper input, .content-wrapper .input-wrapper select, .content-wrapper .input-wrapper textarea {
-      float: left;
-      width: 200px;
+  .content-wrapper .orders-form-wrapper {
+    width: 550px; }
+    .content-wrapper .orders-form-wrapper .input-wrapper {
+      width: calc(100% - 10px);
       height: 30px;
-      border-radius: 5px;
-      font-size: 16px; }
-    .content-wrapper .input-wrapper button {
-      float: left;
-      width: 100px;
-      height: 30px;
-      background-color: orange;
-      font-size: 16px; }
+      padding: 5px; }
+      .content-wrapper .orders-form-wrapper .input-wrapper input, .content-wrapper .orders-form-wrapper .input-wrapper select {
+        float: left;
+        width: 300px;
+        height: 30px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: 1px solid lightslategray; }
+      .content-wrapper .orders-form-wrapper .input-wrapper button {
+        float: left;
+        width: 100px;
+        height: 30px;
+        background-color: orange;
+        font-size: 16px; }
+      .content-wrapper .orders-form-wrapper .input-wrapper .error {
+        color: red;
+        display: block; }
+    .content-wrapper .orders-form-wrapper .textarea-wrapper {
+      width: calc(100% - 10px);
+      padding: 5px; }
+      .content-wrapper .orders-form-wrapper .textarea-wrapper textarea {
+        float: left;
+        width: 300px;
+        height: 100px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: 1px solid lightslategray; }
+    .content-wrapper .orders-form-wrapper .departures {
+      background-color: lightblue; }
+    .content-wrapper .orders-form-wrapper .arrivals {
+      background-color: lightcoral; }
+    .content-wrapper .orders-form-wrapper .personal-details {
+      background-color: lightsteelblue; }
   .content-wrapper .radio-input-wrapper .button-wrapper {
     float: right;
-    padding: 5px; }
+    padding: 5px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
