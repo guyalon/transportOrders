@@ -11,14 +11,14 @@ html,body{
   width: 100%;
 
   .orders-form-wrapper {
-    width: 550px;
+    width: 100%;
     .input-wrapper {
       width: calc(100% - 10px);
-      height: 30px;
+      height: 70px;
       padding: 5px;
       input, select{
         float: left;
-        width: 300px;
+        width: 100%;
         height: 30px;
         border-radius: 5px;
         font-size: 16px;
@@ -53,10 +53,21 @@ html,body{
     .personal-details{background-color: lightsteelblue;}
   }
   .radio-input-wrapper {
+    display: flex;
     .button-wrapper {
-      float: right;
+      background-color: lightgoldenrodyellow;
       padding: 5px;
       cursor: pointer;
+      width: 33%;
+      input{
+        visibility: hidden;
+      width: 3px;}
     }
+    .button-wrapper.active{
+      background-color: #d8d4a0;
+    }
+  }
+  .email-wrapper{
+    direction: ltr;
   }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f138733-50cd-4b15-ade0-aff477d1e682" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/emailTemplates.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/170ad615102b5b2842749fbf66b26d24f6b1e3d7/main.scssc" afterPath="$PROJECT_DIR$/.sass-cache/170ad615102b5b2842749fbf66b26d24f6b1e3d7/main.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <state relative-caret-position="345">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -44,30 +45,47 @@
       <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="924">
+              <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            <state relative-caret-position="453">
+              <caret line="150" column="76" selection-start-line="150" selection-start-column="76" selection-end-line="150" selection-end-column="76" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
+                <element signature="e#76#1817#0" expanded="false" />
                 <element signature="e#164#490#0" expanded="false" />
                 <element signature="e#570#1069#0" expanded="false" />
                 <element signature="e#1096#1215#0" expanded="false" />
-                <element signature="e#1661#1817#0" expanded="false" />
-                <element signature="e#2141#2547#0" expanded="false" />
-                <element signature="n#!!block;n#generateOrderForm#0" expanded="false" />
+                <element signature="e#1303#1645#0" expanded="false" />
+                <element signature="e#1659#1815#0" expanded="false" />
+                <element signature="e#1980#2197#0" expanded="false" />
+                <element signature="e#2248#2654#0" expanded="false" />
+                <element signature="e#2729#3238#0" expanded="false" />
                 <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
-                <element signature="e#8467#9291#0" expanded="false" />
+                <element signature="e#10169#10993#0" expanded="false" />
                 <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
-                <marker date="1478708976000" expanded="false" signature="2622:3159" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emailTemplates.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/emailTemplates.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="31" column="82" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+              <folding>
+                <marker date="1478803770000" expanded="true" signature="970:976" ph=" " />
+                <marker date="1478803770000" expanded="true" signature="1804:1811" ph="..." />
+                <marker date="1478803770000" expanded="true" signature="2108:2114" ph=" " />
+                <marker date="1478803770000" expanded="true" signature="3045:3052" ph="..." />
               </folding>
             </state>
           </provider>
@@ -92,9 +110,10 @@
       <list>
         <option value="$PROJECT_DIR$/scripts/autocomplete.js" />
         <option value="$PROJECT_DIR$/autocomplete.html" />
+        <option value="$PROJECT_DIR$/styles/main.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
-        <option value="$PROJECT_DIR$/styles/main.scss" />
+        <option value="$PROJECT_DIR$/scripts/emailTemplates.js" />
       </list>
     </option>
   </component>
@@ -188,7 +207,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../topsecret-client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -197,8 +216,14 @@
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/guyalon/Documents/Projects/orederNir/index.html" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.autocomplete.html">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/orederNir/index.html">
       <method />
     </configuration>
@@ -264,8 +289,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.autocomplete.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.autocomplete.html" />
       </list>
     </recent_temporary>
   </component>
@@ -284,14 +309,15 @@
       <workItem from="1478617619762" duration="10000" />
       <workItem from="1478617650910" duration="4037000" />
       <workItem from="1478679660180" duration="16827000" />
+      <workItem from="1478782200081" duration="13171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26660000" />
+    <option name="totallyTimeSpent" value="39831000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="512" y="-1050" width="1680" height="1050" extended-state="0" />
+    <frame x="512" y="-1050" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -324,10 +350,50 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#76#1817#0" expanded="false" />
+            <element signature="e#164#490#0" expanded="false" />
+            <element signature="e#570#1069#0" expanded="false" />
+            <element signature="e#1096#1215#0" expanded="false" />
+            <element signature="e#1303#1645#0" expanded="false" />
+            <element signature="e#1659#1815#0" expanded="false" />
+            <element signature="e#1980#2197#0" expanded="false" />
+            <element signature="e#2248#2654#0" expanded="false" />
+            <element signature="e#2729#3238#0" expanded="false" />
+            <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
+            <element signature="e#10169#10993#0" expanded="false" />
+            <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -350,16 +416,18 @@
           <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#76#1817#0" expanded="false" />
             <element signature="e#164#490#0" expanded="false" />
             <element signature="e#570#1069#0" expanded="false" />
             <element signature="e#1096#1215#0" expanded="false" />
-            <element signature="e#1661#1817#0" expanded="false" />
-            <element signature="e#2141#2547#0" expanded="false" />
-            <element signature="n#!!block;n#generateOrderForm#0" expanded="false" />
+            <element signature="e#1303#1645#0" expanded="false" />
+            <element signature="e#1659#1815#0" expanded="false" />
+            <element signature="e#1980#2197#0" expanded="false" />
+            <element signature="e#2248#2654#0" expanded="false" />
+            <element signature="e#2729#3238#0" expanded="false" />
             <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
-            <element signature="e#8467#9291#0" expanded="false" />
+            <element signature="e#10169#10993#0" expanded="false" />
             <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
-            <marker date="1478708976000" expanded="false" signature="2622:3159" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -378,16 +446,18 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#76#1817#0" expanded="false" />
             <element signature="e#164#490#0" expanded="false" />
             <element signature="e#570#1069#0" expanded="false" />
             <element signature="e#1096#1215#0" expanded="false" />
-            <element signature="e#1661#1817#0" expanded="false" />
-            <element signature="e#2141#2547#0" expanded="false" />
-            <element signature="n#!!block;n#generateOrderForm#0" expanded="false" />
+            <element signature="e#1303#1645#0" expanded="false" />
+            <element signature="e#1659#1815#0" expanded="false" />
+            <element signature="e#1980#2197#0" expanded="false" />
+            <element signature="e#2248#2654#0" expanded="false" />
+            <element signature="e#2729#3238#0" expanded="false" />
             <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
-            <element signature="e#8467#9291#0" expanded="false" />
+            <element signature="e#10169#10993#0" expanded="false" />
             <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
-            <marker date="1478708976000" expanded="false" signature="2622:3159" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -406,16 +476,18 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#76#1817#0" expanded="false" />
             <element signature="e#164#490#0" expanded="false" />
             <element signature="e#570#1069#0" expanded="false" />
             <element signature="e#1096#1215#0" expanded="false" />
-            <element signature="e#1661#1817#0" expanded="false" />
-            <element signature="e#2141#2547#0" expanded="false" />
-            <element signature="n#!!block;n#generateOrderForm#0" expanded="false" />
+            <element signature="e#1303#1645#0" expanded="false" />
+            <element signature="e#1659#1815#0" expanded="false" />
+            <element signature="e#1980#2197#0" expanded="false" />
+            <element signature="e#2248#2654#0" expanded="false" />
+            <element signature="e#2729#3238#0" expanded="false" />
             <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
-            <element signature="e#8467#9291#0" expanded="false" />
+            <element signature="e#10169#10993#0" expanded="false" />
             <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
-            <marker date="1478708976000" expanded="false" signature="2622:3159" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -434,68 +506,71 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#76#1817#0" expanded="false" />
             <element signature="e#164#490#0" expanded="false" />
             <element signature="e#570#1069#0" expanded="false" />
             <element signature="e#1096#1215#0" expanded="false" />
-            <element signature="e#1661#1817#0" expanded="false" />
-            <element signature="e#2141#2547#0" expanded="false" />
-            <element signature="n#!!block;n#generateOrderForm#0" expanded="false" />
+            <element signature="e#1303#1645#0" expanded="false" />
+            <element signature="e#1659#1815#0" expanded="false" />
+            <element signature="e#1980#2197#0" expanded="false" />
+            <element signature="e#2248#2654#0" expanded="false" />
+            <element signature="e#2729#3238#0" expanded="false" />
             <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
-            <element signature="e#8467#9291#0" expanded="false" />
+            <element signature="e#10169#10993#0" expanded="false" />
             <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
-            <marker date="1478708976000" expanded="false" signature="2622:3159" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="164" column="5" selection-start-line="104" selection-start-column="0" selection-end-line="164" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/autocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/autocomplete.html" />
+    <entry file="file://$PROJECT_DIR$/scripts/autocomplete.js" />
     <entry file="file://$PROJECT_DIR$/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="924">
+          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        <state relative-caret-position="453">
+          <caret line="150" column="76" selection-start-line="150" selection-start-column="76" selection-end-line="150" selection-end-column="76" />
           <folding>
             <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#76#1817#0" expanded="false" />
             <element signature="e#164#490#0" expanded="false" />
             <element signature="e#570#1069#0" expanded="false" />
             <element signature="e#1096#1215#0" expanded="false" />
-            <element signature="e#1661#1817#0" expanded="false" />
-            <element signature="e#2141#2547#0" expanded="false" />
-            <element signature="n#!!block;n#generateOrderForm#0" expanded="false" />
+            <element signature="e#1303#1645#0" expanded="false" />
+            <element signature="e#1659#1815#0" expanded="false" />
+            <element signature="e#1980#2197#0" expanded="false" />
+            <element signature="e#2248#2654#0" expanded="false" />
+            <element signature="e#2729#3238#0" expanded="false" />
             <element signature="n#!!block;n#fillDataObject#0" expanded="false" />
-            <element signature="e#8467#9291#0" expanded="false" />
+            <element signature="e#10169#10993#0" expanded="false" />
             <element signature="n#!!block;n#initAutocomplete#0" expanded="false" />
-            <marker date="1478708976000" expanded="false" signature="2622:3159" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/emailTemplates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="31" column="82" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+          <folding>
+            <marker date="1478803770000" expanded="true" signature="970:976" ph=" " />
+            <marker date="1478803770000" expanded="true" signature="1804:1811" ph="..." />
+            <marker date="1478803770000" expanded="true" signature="2108:2114" ph=" " />
+            <marker date="1478803770000" expanded="true" signature="3045:3052" ph="..." />
           </folding>
         </state>
       </provider>

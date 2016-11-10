@@ -9,14 +9,14 @@ html, body {
 .content-wrapper {
   width: 100%; }
   .content-wrapper .orders-form-wrapper {
-    width: 550px; }
+    width: 100%; }
     .content-wrapper .orders-form-wrapper .input-wrapper {
       width: calc(100% - 10px);
-      height: 30px;
+      height: 70px;
       padding: 5px; }
       .content-wrapper .orders-form-wrapper .input-wrapper input, .content-wrapper .orders-form-wrapper .input-wrapper select {
         float: left;
-        width: 300px;
+        width: 100%;
         height: 30px;
         border-radius: 5px;
         font-size: 16px;
@@ -46,9 +46,19 @@ html, body {
       background-color: lightcoral; }
     .content-wrapper .orders-form-wrapper .personal-details {
       background-color: lightsteelblue; }
-  .content-wrapper .radio-input-wrapper .button-wrapper {
-    float: right;
-    padding: 5px;
-    cursor: pointer; }
+  .content-wrapper .radio-input-wrapper {
+    display: flex; }
+    .content-wrapper .radio-input-wrapper .button-wrapper {
+      background-color: lightgoldenrodyellow;
+      padding: 5px;
+      cursor: pointer;
+      width: 33%; }
+      .content-wrapper .radio-input-wrapper .button-wrapper input {
+        visibility: hidden;
+        width: 3px; }
+    .content-wrapper .radio-input-wrapper .button-wrapper.active {
+      background-color: #d8d4a0; }
+  .content-wrapper .email-wrapper {
+    direction: ltr; }
 
 /*# sourceMappingURL=main.css.map */

@@ -43,7 +43,6 @@ var Components = function () {
         '</div>'
     ].join('');
 
-
     var generateTextarea = function (inputName,label,placeholder,className) {
 
         var input = [
@@ -55,7 +54,6 @@ var Components = function () {
         ].join('');
         return $(input);
     };
-
 
     return {
         generateInput:generateInput,
@@ -73,6 +71,8 @@ $(document).ready(function () {
 
 
     $('.radio-input-wrapper .button-wrapper').click(function () {
+        $('.radio-input-wrapper .button-wrapper').removeClass('active');
+        $(this).addClass('active');
         $(this).find('input').prop('checked',true);
         $(this).find('input').trigger('change');
     });
@@ -94,7 +94,7 @@ $(document).ready(function () {
     });
 
     $('.radio-input-wrapper .button-wrapper input').change(function () {
-        console.log('fffff')
+
         var value = $(this).val();
         switch (value){
             case 'both_ways':{
@@ -125,25 +125,81 @@ $(document).ready(function () {
         console.log(dataObj);
 
 
+        calculatePrices(dataObj);
+        emailToTravelAgency(dataObj)
+
 
 
     });
+
+    generateFakes();
 
     
 
 });
 
+function calculatePrices(dataObj) {
+
+    var pricesObj = {
+        'Fiumicino':[18,35,50,60,70,80,85,110],
+        'Civitavecchia':[90,100,120,160,180,200,215,230]
+    };
+
+
+    for (key in pricesObj){
+        dataObj['arrival_price'] = (dataObj.arrival_port.indexOf(key) >= 0) ? pricesObj[key][parseInt(dataObj.number_of_people) - 1] : dataObj['arrival_price'];
+        dataObj['departure_price'] = (dataObj.departure_port.indexOf(key) >= 0) ? pricesObj[key][parseInt(dataObj.departure_number_of_people) - 1] : dataObj['arrival_price'];
+    }
+
+
+
+
+}
+
+var emailTemplates = new EmailTemplates()
+
+function emailToTravelAgency(dataObj) {
+
+    var emailTemplate = $(emailTemplates.travelAgency.content);
+
+    for (key in dataObj){
+        emailTemplate.find('.'+key).html(dataObj[key]);
+    }
+
+    emailTemplate.find('.round-direction .origin').html(dataObj.arrival_port);
+    emailTemplate.find('.round-direction .destination').html(dataObj.destination);
+    emailTemplate.find('.return-direction .origin').html(dataObj.pickup_location);
+    emailTemplate.find('.return-direction .destination').html(dataObj.departure_port);
+
+    switch (dataObj.transport_directions){
+        case 'only_from_airport':{
+            emailTemplate.find('.return-direction').remove();
+            break;
+        };
+        case 'only_to_airport':{
+            emailTemplate.find('.round-direction').remove();
+            break;
+        }
+    }
+
+    $('.orders-form-wrapper').append(emailTemplate);
+
+
+
+
+}
+
 
 function generateOrderForm() {
 
-    var airportSelectValuesArray = [{val:'fco',label:'Leonardo da Vinci - Fiumicino'},{val:'cia',label:'Ciampiano Airport'},{val:'ctp',label:'Civitavecchia Port'}]
+    var airportSelectValuesArray = [{val:'Leonardo da Vinci - Fiumicino',label:'Leonardo da Vinci - Fiumicino'},{val:'Ciampiano Airport',label:'Ciampiano Airport'},{val:'Civitavecchia Port',label:'Civitavecchia Port'}]
     var nopSelectValuesArray = [{val:'1',label:'1'},{val:'2',label:'2'},{val:'3',label:'3'},{val:'4',label:'4'},{val:'5',label:'5'},{val:'6',label:'6'},{val:'7',label:'7'},{val:'8',label:'+8'}]
 
     // Arrivals
     $('#transportation_form .arrivals').append(components.generateInput(
-        'date','date_of_arrival','תאריך נחיתה','','date-of-arrival required'));
+        'date','arrival_date','תאריך נחיתה','','date-of-arrival required'));
     $('#transportation_form .arrivals').append(components.generateInput(
-        'time','time_of_arrival','שעת נחיתה','נא הקש את שעת הנחיתה','time-of-arrival required'));
+        'time','arrival_time','שעת נחיתה','נא הקש את שעת הנחיתה','time-of-arrival required'));
     $('#transportation_form .arrivals').append(components.generateSelect(
         'נחיתה בשדה תעופה / נמל','arrival_port','arrival-port',airportSelectValuesArray));
     $('#transportation_form .arrivals').append(components.generateInput(
@@ -153,7 +209,7 @@ function generateOrderForm() {
     $('#transportation_form .arrivals').append(components.generateInput('text','origin','הגעה מ','נא הקש את מיקום ארץ המוצא','origin required english-only'));
 
 
-    $('#transportation_form .arrivals').append($('<div class="input-wrapper"><label for="destination">יעד ברומא</label><input name="origin" id="autocomplete" placeholder="כתובת מלון או דירה ברומא" type="text" class="origin required english-only"></input></div>'));
+    $('#transportation_form .arrivals').append($('<div class="input-wrapper"><label for="destination">יעד ברומא</label><input name="destination" id="autocomplete" placeholder="כתובת מלון או דירה ברומא" type="text" class="origin required english-only"></input></div>'));
 
     $('#transportation_form .arrivals').append(components.generateSelect(
         'מספר אנשים','number_of_people','number-of-people required',nopSelectValuesArray ));
@@ -161,11 +217,11 @@ function generateOrderForm() {
 
     // Departure
     $('#transportation_form .departures').append(components.generateInput(
-        'date','date_of_departure','מועד המראה','','date-of-departure required'));
+        'date','departure_date','מועד המראה','','departure-date required'));
     $('#transportation_form .departures').append(components.generateInput(
         'time','time_of_flight','שעת המראה','נא הקש את שעת ההמראה','time-of-departure required'));
     $('#transportation_form .departures').append(components.generateSelect(
-        'נחיתה בשדה תעופה / נמל','departure_port','departure-port required',airportSelectValuesArray));
+        'יציאה משדה תעופה / נמל','departure_port','departure-port required',airportSelectValuesArray));
     $('#transportation_form .departures').append(components.generateInput(
         'text','departure_airline_name','שם חברת התעופה/שייט','נא הקש את שם חברת התעופה/שייט','airline-name required english-only'));
     $('#transportation_form .departures').append(components.generateInput(
@@ -261,5 +317,39 @@ function fillInAddress() {
 function fillInAddress2() {
     var place2 = autocomplete2.getPlace();
     console.log(place2);
+}
+
+
+function generateFakes(){
+
+    var fakeData = {
+        arrival_airline_name: "El Al",
+        arrival_date: "2016-12-12",
+        arrival_flight_number: "345Av",
+        arrival_port: "Civitavecchia Port",
+        arrival_time: "02:01",
+        departure_date: "2016-12-14",
+        departure_airline_name: "El Al",
+        departure_flight_number: "123sa",
+        departure_number_of_people: "3",
+        departure_port: "Civitavecchia Port",
+        email: "guyandpinky@gmail.com",
+        final_destination: "Israel",
+        full_name: "Guy Alon",
+        israel_phone_number: "+972547931858",
+        notes: "REMARKS",
+        number_of_people: "2",
+        origin: "Via Roma, Turin, Metropolitan City of Turin, Italy",
+        pickup_location: "Bomba, Province of Chieti, Italy",
+        pickup_time: "02:01",
+        rome_phone_number: "+972547931858",
+        time_of_flight: "00:12",
+        destination:'trastevere roma'
+    }
+
+    for (key in fakeData){
+        $('input[name='+key+'],select[name='+key+']').val(fakeData[key]);
+    }
+
 }
 
